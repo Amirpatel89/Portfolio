@@ -3,9 +3,37 @@ var router = express.Router();
 var config = require('../config/config.js');
 var mysql = require('mysql');
 
+var connection = mysql.createConnection(config.db);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express' })
 });
+
+
+
+
+
+
+
+
+router.post('/contact', (req, res, next)=>{
+	var name = req.body.name;
+	var email = req.body.email;
+	var message = req.body.message;
+	var insertQuery = `INSERT INTO messages (name, email, message) VALUES (?, ?, ?)`;
+	connection.query(insertQuery, [name],[email],[message], (error, results)=>{
+		if(error){
+			throw error;
+		}
+		res.redirect('/hello');
+		console.log("hi")
+
+	});
+});
+
+
+
+
 
 module.exports = router;
