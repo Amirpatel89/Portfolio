@@ -5,30 +5,37 @@ var mysql = require('mysql');
 
 var connection = mysql.createConnection(config.db);
 
+
+connection.connect((error)=>{
+	if(error){
+		throw error;
+	}else{
+		console.log('connected')
+	}
+})
+
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' })
 });
 
 
-
-
-
-
-
-
 router.post('/contact', (req, res, next)=>{
 	var name = req.body.name;
 	var email = req.body.email;
 	var message = req.body.message;
-	var insertQuery = `INSERT INTO messages (name, email, message) VALUES (?, ?, ?)`;
-	connection.query(insertQuery, [name],[email],[message], (error, results)=>{
+	var insertQuery = `INSERT INTO messages (name, email, message) VALUES (?, ?, ?);`;
+	connection.query(insertQuery, [name, email, message], (error, results)=>{
 		if(error){
 			throw error;
-		}
-		res.redirect('/hello');
-		console.log("hi")
+		}else{
+		received.push('y');
+		res.redirect('/?msg=received');
 
+		}
 	});
 });
 

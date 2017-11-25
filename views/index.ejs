@@ -55,12 +55,14 @@
 			</div>
 		</div>
 		<section id="Contact-Me" class="wrapper">
-            <div>
+            <div><% if(received[0] == 'y'){%>
+            	<h1>thanks</h1>
+            <%}else{ %>
                 <h2>Contact-Me</h2>
-                <form method="post" id="myform">
+                <form action="/contact" method="post" id="myform">
                     <div class="field">
                         <label for="name">Name</label>
-                        <input type="text" name="from_name" id="name" value="" maxlength="50">
+                        <input type="text" name="name" id="name" value="" maxlength="50">
                     </div>
                     <div class="field">
                         <label for="email">Email</label>
@@ -68,11 +70,11 @@
                     </div>
                     <div class="field">
                         <label for="message">Message</label>
-                        <textarea name="message_html" id="message" rows="6" maxlength="200" placeholder="Please write a brief message. I'm excited to hear from you!"></textarea>
+                        <textarea name="message" id="message" rows="6" maxlength="200" placeholder="Please write a brief message. I'm excited to hear from you!"></textarea>
                     </div>
                     <button>Send</button>
                 </form>
-            </div>
+          <%  } %></div>
         </section>
 	</main>
 <footer class="page-footer teal lighten-3">
