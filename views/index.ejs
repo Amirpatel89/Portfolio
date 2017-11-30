@@ -8,29 +8,78 @@
 	<main>
 		<div class="container">
 			<div class="row">	
-				<div id="About-Me">I'm a Full Stack Engineer. Hire Me. I'm Awesome
+				<div id="About-Me col-s12">I'm a Full Stack Engineer. Hire Me. I'm Awesome
 				</div>
-				<div id="Skills">
+				<div id="Skills col-s6">
 					<h1>Skills</h1>
-				 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div>
+						<button onclick="checkPython();">Python</button>
+						<div id = "python"></div>
+					</div>
+					<div>
+						<button onclick="checkJavascript();">Javascript</button>
+						<div id = "javascript">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkNode();">Node</button>
+						<div id = "node">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkExpress();">Express</button>
+						<div id = "express">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkJQuery();">jQuery</button>
+						<div id = "jquery">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkMySql();">mySql</button>
+						<div id = "mysql">
+						</div>
+					<div>
+						<button onclick="checkHTML();">HTML5</button>
+						<div id = "html">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkCSS();">CSS3</button>
+						<div id = "css">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkAjax();">AJAX</button>
+						<div id = "ajax">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkBootstrap();">Bootstrap</button>
+						<div id = "bootstrap">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkMaterialize();">Materialize</button>
+						<div id = "materialize">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkAngular();">Angular</button>
+						<div id = "angular">
+						</div>
+					</div>
+					<div>
+						<button onclick="checkReact();">React</button>
+						<div id = "react">
+						</div>
+					</div>
 				</div>
+				<div id="Project-box">
+					<p1>Projects<p1>
+				</div>
+				<a id ="links" href=""></a>
 				<div id="Projects">
 					<h1>Projects</h1>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -55,9 +104,6 @@
 			</div>
 		</div>
 		<section id="Contact-Me" class="wrapper">
-            <div><% if(received[0] == 'y'){%>
-            	<h1>thanks</h1>
-            <%}else{ %>
                 <h2>Contact-Me</h2>
                 <form action="/contact" method="post" id="myform">
                     <div class="field">
@@ -74,7 +120,7 @@
                     </div>
                     <button>Send</button>
                 </form>
-          <%  } %></div>
+      
         </section>
 	</main>
 <footer class="page-footer teal lighten-3">
