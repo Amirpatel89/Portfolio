@@ -1,11 +1,3 @@
-// function thanks(){
-// 	// if(received == true){
-// 	// 	inner.html("Thank You!");
-// 	// }
-// 	res.render('ughh');
-// }
-
-
 
 var shoeboxSkills = {
 	python: 'no',
@@ -46,8 +38,6 @@ var starFoodieSkills = {
 }
 var projects = [shoeboxSkills, starFoodieSkills]
 console.log(projects)
-	// document.getElementById("feature-picture").src = 'images/' + 'shoebox' + '.jpg';
-	// document.getElementById("feature-caption").innerHTML = shoeboxSkills.caption;
 
 
 
@@ -81,21 +71,6 @@ function checkProjects(x){
 	};
 	var cleanProjectObject = _.omit(projectObject, [undefined]);
 	var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
-
-
-	
-	// function showProjects(){
-
-
-	// 	document.getElementById("links").innerHTML = Object.keys(cleanProjectObject);
-	// 	document.getElementById("links").href = Object.values(cleanProjectObject);
-	// 	document.getElementById("links").target = Object.keys(cleanProjectObject);
-		// document.getElementById("pic-link").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
-		// if(Object.keys(cleanProjectObject)[0] !== undefined){
-		// document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
-		// document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
-		// document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
-		// }
 		if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] !== undefined){
 			document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 			document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
@@ -122,15 +97,6 @@ function checkProjects(x){
 			document.getElementById("project2Pic").src = "";
 			document.getElementById("project2Caption").innerHTML = "";
 		}
-
-
-
-
-
-	// }	
-	// showProjects();
-
-
 }
  
 
