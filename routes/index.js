@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 var config = require('../config/config.js');
 var mysql = require('mysql');
-var lodash = require('lodash-clean')
+var lodash = require('lodash')
 var connection = mysql.createConnection(config.db);
+
 
 
 connection.connect((error)=>{

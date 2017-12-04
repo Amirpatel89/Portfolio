@@ -5,8 +5,7 @@
 // 	res.render('ughh');
 // }
 
-
-
+var starFoodieCaption = 'This is an app for easily finding the nearest high rated restaurant near your location'
 
 
 var shoeboxSkills = {
@@ -23,7 +22,9 @@ var shoeboxSkills = {
 	materialize: 'no',
 	angular: 'no',
 	react: 'no',
-	name: 'Shoebox'
+	name: 'Shoebox',
+	caption: 'A site for allowing foster children the opportunity to have professional photos taken throughout childhood.'
+
 
 }
 var starFoodieSkills = {
@@ -40,7 +41,8 @@ var starFoodieSkills = {
 	materialize: 'no',
 	angular: 'no',
 	react: 'no',
-	name: 'StarFoodie'
+	name: 'StarFoodie',
+	caption: 'This is an app for easily finding the nearest high rated restaurant near your location'
 
 }
 var projects = [shoeboxSkills, starFoodieSkills]
@@ -48,156 +50,74 @@ console.log(projects)
 
 
 
-function checkPython(){
+function checkProjects(x){
 	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].python == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkJavascript(){
-	returnArray = [];
+	returnCaptions = [];
 	projectString = "";
 	projectString2 = "";
 	projectString3 = "";
+	projectString4 = "";
 	for (i = 0; i < projects.length; i++){
-		if(projects[i].javascript == 'yes'){
+		if(projects[i][x] == 'yes'){
 			returnArray.push(projects[i].name)
+			returnCaptions.push(projects[i].caption)
 		}
 	}
+	console.log(returnCaptions)
 	projectString += returnArray[0];
 	var projectLink = "/" + projectString
 	projectString2 += returnArray[1];
 	var projectLink2 = "/" + projectString2
 	projectString3 += returnArray[2];
 	var projectLink3 = "/" + projectString3
-
+	projectString4 += returnArray[3];
+	var projectLink4 = "/" + projectString4
 	var projectObject = {
 		[projectString]: projectLink,
 		[projectString2]: projectLink2,
-		[projectString3]: projectLink3
-
+		[projectString3]: projectLink3,
+		[projectString4]: projectLink4
 	};
-	var cleanProjectObject = clean(projectObject)
+	console.log(projectObject)
+	var cleanProjectObject = _.omit(projectObject, [undefined]);
+	var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
+	console.log(cleanProjectCaptions);
 	console.log(cleanProjectObject)
-
-
+	console.log(Object.keys(cleanProjectObject)[0])
+	console.log(starFoodieSkills.caption)
 	
+	// function showProjects(){
 
-	console.log(projectObject);
-	console.log(projectObject[projectLink])
-	console.log(Object.values(projectObject))
-	console.log(Object.keys(projectObject))
-	function showProjects(){
-			document.getElementById("links").innerHTML = Object.keys(projectObject);
-			document.getElementById("links").href = Object.values(projectObject);
-			document.getElementById("links").target = Object.keys(projectObject);
 
-	}
-	showProjects();
-}
-function checkNode(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].node == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkExpress(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].express == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkJQuery(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].jquery == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkMySql(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].mysql == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
+	// 	document.getElementById("links").innerHTML = Object.keys(cleanProjectObject);
+	// 	document.getElementById("links").href = Object.values(cleanProjectObject);
+	// 	document.getElementById("links").target = Object.keys(cleanProjectObject);
+		// document.getElementById("pic-link").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+
+		document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
+		document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+		document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+
+
+		document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
+		document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
+		document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+
+
+
+
+
+
+	// }	
+	// showProjects();
+
+
 }
 
-function checkHTML(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].html == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkCSS(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].css == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkAjax(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].ajax == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkBootstrap(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].bootstrap == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkMaterialize(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].materialize == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkAngular(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].angular == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
-function checkReact(){
-	returnArray = [];
-	for (i = 0; i < projects.length; i++){
-		if(projects[i].react == 'yes'){
-			returnArray.push(projects[i].name)
-			document.getElementById("Project-box").innerHTML = returnArray;
-		}
-	}
-}
+
+
+
+
 
 
 
