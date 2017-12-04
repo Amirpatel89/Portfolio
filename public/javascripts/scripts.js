@@ -5,7 +5,6 @@
 // 	res.render('ughh');
 // }
 
-var starFoodieCaption = 'This is an app for easily finding the nearest high rated restaurant near your location'
 
 
 var shoeboxSkills = {
@@ -47,6 +46,8 @@ var starFoodieSkills = {
 }
 var projects = [shoeboxSkills, starFoodieSkills]
 console.log(projects)
+	// document.getElementById("feature-picture").src = 'images/' + 'shoebox' + '.jpg';
+	// document.getElementById("feature-caption").innerHTML = shoeboxSkills.caption;
 
 
 
