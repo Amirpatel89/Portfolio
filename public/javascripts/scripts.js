@@ -78,13 +78,10 @@ function checkProjects(x){
 		[projectString3]: projectLink3,
 		[projectString4]: projectLink4
 	};
-	console.log(projectObject)
 	var cleanProjectObject = _.omit(projectObject, [undefined]);
 	var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
-	console.log(cleanProjectCaptions);
-	console.log(cleanProjectObject)
-	console.log(Object.keys(cleanProjectObject)[0])
-	console.log(starFoodieSkills.caption)
+
+
 	
 	// function showProjects(){
 
@@ -93,16 +90,37 @@ function checkProjects(x){
 	// 	document.getElementById("links").href = Object.values(cleanProjectObject);
 	// 	document.getElementById("links").target = Object.keys(cleanProjectObject);
 		// document.getElementById("pic-link").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+		// if(Object.keys(cleanProjectObject)[0] !== undefined){
+		// document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
+		// document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+		// document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+		// }
+		if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] !== undefined){
+			document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
+			document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+			document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+			document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
+			document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
+			document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
 
-		document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
-		document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
-		document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+		}
+		else if (Object.keys(cleanProjectObject)[0] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
+			document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
+			document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+			document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+			document.getElementById("project2Title").innerHTML = "";
+			document.getElementById("project2Pic").src = "";
+			document.getElementById("project2Caption").innerHTML = "";
 
-
-		document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
-		document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
-		document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
-
+		}
+		else{
+			document.getElementById("project1Title").innerHTML = "";
+			document.getElementById("project1Pic").src = "";
+			document.getElementById("project1Caption").innerHTML = "";
+			document.getElementById("project2Title").innerHTML = "";
+			document.getElementById("project2Pic").src = "";
+			document.getElementById("project2Caption").innerHTML = "";
+		}
 
 
 
@@ -113,7 +131,7 @@ function checkProjects(x){
 
 
 }
-
+ 
 
 
 
