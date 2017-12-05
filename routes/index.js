@@ -33,7 +33,6 @@ router.post('/contact', (req, res, next)=>{
 		if(error){
 			throw error;
 		}else{
-		received.push('y');
 		res.redirect('/?msg=received');
 
 		}

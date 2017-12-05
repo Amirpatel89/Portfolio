@@ -71,6 +71,8 @@ function checkProjects(x){
 	};
 	var cleanProjectObject = _.omit(projectObject, [undefined]);
 	var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
+
+
 		if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] !== undefined){
 			document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 			document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
@@ -78,6 +80,10 @@ function checkProjects(x){
 			document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 			document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 			document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+			$('.project1').addClass('animated bounce');
+			setTimeout(function(){ $(".project1").removeClass("animated bounce");},1000)
+			$('.project2').addClass('animated flash');
+			setTimeout(function(){ $(".project2").removeClass("animated flash");},1000)
 
 		}
 		else if (Object.keys(cleanProjectObject)[0] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
@@ -87,6 +93,13 @@ function checkProjects(x){
 			document.getElementById("project2Title").innerHTML = "";
 			document.getElementById("project2Pic").src = "";
 			document.getElementById("project2Caption").innerHTML = "";
+			$('.project1').addClass('animated bounce');
+			setTimeout(function(){ $(".project1").removeClass("animated bounce");},1000)
+			// document.getElementById("proj2").style.visibility= "none";
+
+
+
+
 
 		}
 		else{
@@ -96,13 +109,11 @@ function checkProjects(x){
 			document.getElementById("project2Title").innerHTML = "";
 			document.getElementById("project2Pic").src = "";
 			document.getElementById("project2Caption").innerHTML = "";
+			$('.project-list').addClass('animated bounce');
+			// setTimeout(function(){ $(".project-list").removeClass("animated bounce");},1000)
+
 		}
 }
- 
-
-
-
-
 
 
 
