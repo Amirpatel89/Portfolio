@@ -1,3 +1,12 @@
+$( document ).ready(function() {
+	$(".project1").hide()
+	$(".project2").hide()
+
+});
+
+
+
+
 
 var shoeboxSkills = {
 	python: 'no',
@@ -5,6 +14,7 @@ var shoeboxSkills = {
 	node: 'yes',
 	express: 'yes',
 	jQuery: 'yes',
+	lodash: 'no',
 	mySQL: 'yes',
 	html: 'yes',
 	css: 'yes',
@@ -13,8 +23,10 @@ var shoeboxSkills = {
 	materialize: 'no',
 	angular: 'no',
 	react: 'no',
+	redux: 'no',
 	name: 'Shoebox',
-	caption: 'A site for allowing foster children the opportunity to have professional photos taken throughout childhood.'
+	caption: 'A site for allowing foster children the opportunity to have professional photos taken throughout childhood.',
+	all: 'yes'
 
 
 }
@@ -24,6 +36,7 @@ var starFoodieSkills = {
 	node: 'no',
 	express: 'no',
 	jQuery: 'yes',
+	lodash: 'no',
 	mySQL: 'no',
 	html: 'yes',
 	css: 'yes',
@@ -32,8 +45,10 @@ var starFoodieSkills = {
 	materialize: 'no',
 	angular: 'no',
 	react: 'no',
+	redux: 'no',
 	name: 'StarFoodie',
-	caption: 'This is an app for easily finding the nearest high rated restaurant near your location'
+	caption: 'This is an app for easily finding the nearest high rated restaurant near your location.',
+	all: 'yes'
 
 }
 var projects = [shoeboxSkills, starFoodieSkills]
@@ -80,10 +95,13 @@ function checkProjects(x){
 			document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 			document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 			document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
-			$('.project1').addClass('animated bounce');
-			setTimeout(function(){ $(".project1").removeClass("animated bounce");},1000)
-			$('.project2').addClass('animated flash');
-			setTimeout(function(){ $(".project2").removeClass("animated flash");},1000)
+			$(".project1").removeClass("animated slideOutRight");
+			$(".project2").removeClass("animated slideOutRight");
+			$('.project1').addClass('animated slideInRight');
+			$('.project2').addClass('animated slideInRight');
+			$(".project1").show()
+			$(".project2").show()
+
 
 		}
 		else if (Object.keys(cleanProjectObject)[0] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
@@ -93,9 +111,22 @@ function checkProjects(x){
 			document.getElementById("project2Title").innerHTML = "";
 			document.getElementById("project2Pic").src = "";
 			document.getElementById("project2Caption").innerHTML = "";
-			$('.project1').addClass('animated bounce');
-			setTimeout(function(){ $(".project1").removeClass("animated bounce");},1000)
-			// document.getElementById("proj2").style.visibility= "none";
+			// if ($(".project2:has(*)").length) {
+			// 	$('.project2').addClass('animated slideOutRight');
+			// 	console.log('1')
+			// 	$(".project2").show()
+			// }
+
+			// 	$('.project2').addClass('animated slideOutRight');
+				$(".project1").removeClass("animated slideOutRight");
+				$(".project2").removeClass("animated slideOutRight");
+				$(".project1").show()
+				// $(".project2").hide()
+				$('.project1').addClass('animated slideInRight');
+				$('.project2').addClass('animated slideOutRight');
+
+				console.log('2')
+		
 
 
 
@@ -103,14 +134,10 @@ function checkProjects(x){
 
 		}
 		else{
-			document.getElementById("project1Title").innerHTML = "";
-			document.getElementById("project1Pic").src = "";
-			document.getElementById("project1Caption").innerHTML = "";
-			document.getElementById("project2Title").innerHTML = "";
-			document.getElementById("project2Pic").src = "";
-			document.getElementById("project2Caption").innerHTML = "";
-			$('.project-list').addClass('animated bounce');
-			// setTimeout(function(){ $(".project-list").removeClass("animated bounce");},1000)
+			$('.project1').addClass('animated slideOutRight');
+
+			$('.project2').addClass('animated slideOutRight');
+			
 
 		}
 }
