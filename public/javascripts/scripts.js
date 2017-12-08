@@ -4,11 +4,30 @@ $( document ).ready(function() {
 
 });
 
+const pygameSkills = {
+	python: 'yes',
+	javascript: 'no',
+	node: 'no',
+	express: 'no',
+	jQuery: 'no',
+	lodash: 'no',
+	mySQL: 'no',
+	html: 'no',
+	css: 'no',
+	ajax: 'no',
+	bootstrap: 'no',
+	materialize: 'no',
+	angular: 'no',
+	react: 'no',
+	redux: 'no',
+	name: 'Pygame',
+	caption: 'A simple game made solely in Python',
+	all: 'yes'
+}
 
 
 
-
-var shoeboxSkills = {
+const shoeboxSkills = {
 	python: 'no',
 	javascript: 'yes',
 	node: 'yes',
@@ -30,7 +49,7 @@ var shoeboxSkills = {
 
 
 }
-var starFoodieSkills = {
+const starFoodieSkills = {
 	python: 'no',
 	javascript: 'yes',
 	node: 'no',
@@ -101,31 +120,31 @@ function checkProjects(x){
 			$('.project2').addClass('animated slideInRight');
 			$(".project1").show()
 			$(".project2").show()
+						
+
+			
+
+
 
 
 		}
 		else if (Object.keys(cleanProjectObject)[0] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
-			document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
+							document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 			document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 			document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
-			document.getElementById("project2Title").innerHTML = "";
-			document.getElementById("project2Pic").src = "";
-			document.getElementById("project2Caption").innerHTML = "";
-			// if ($(".project2:has(*)").length) {
-			// 	$('.project2').addClass('animated slideOutRight');
-			// 	console.log('1')
-			// 	$(".project2").show()
-			// }
-
-			// 	$('.project2').addClass('animated slideOutRight');
 				$(".project1").removeClass("animated slideOutRight");
-				$(".project2").removeClass("animated slideOutRight");
+				
 				$(".project1").show()
-				// $(".project2").hide()
+					
 				$('.project1').addClass('animated slideInRight');
 				$('.project2').addClass('animated slideOutRight');
 
-				console.log('2')
+
+							
+
+
+
+				
 		
 
 
@@ -137,6 +156,7 @@ function checkProjects(x){
 			$('.project1').addClass('animated slideOutRight');
 
 			$('.project2').addClass('animated slideOutRight');
+			
 			
 
 		}
