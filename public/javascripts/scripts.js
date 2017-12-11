@@ -2,8 +2,6 @@ $( document ).ready(function() {
 	$(".project1").hide()
 	$(".project2").hide()
 	$(".project3").hide()
-
-
 });
 const finalProjectSkills = {
 	python: 'no',
@@ -84,16 +82,7 @@ const starFoodieSkills = {
 }
 var projects = [pygameSkills, shoeboxSkills, starFoodieSkills]
 console.log(projects)
-function organize(x){
-	if($(".project1").is(':visible')){
-		console.log('showing')
-		$('.project1').addClass('animated slideOutRight');
-		$('.project2').addClass('animated slideOutRight');
-		$('.project3').addClass('animated slideOutRight');
-		setTimeout(checkProjects, 1000, x);
-	}else{
-		checkProjects(x)
-	}
+
 	// 	else if($(".project2").show()){
 	// 	console.log('showing')
 	// 	$('.project2').addClass('animated slideOutRight');
@@ -139,7 +128,41 @@ function organize(x){
 			};
 			var cleanProjectObject = _.omit(projectObject, [undefined]);
 			var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
-			console.log(cleanProjectObject)
+			console.log(projectString);
+			if($(".project1").is(':visible')){
+				if(document.getElementById("project1Title").innerHTML == projectString){
+					organize(x);
+				}
+				if(document.getElementById("project2Title").innerHTML == projectString2){
+					organize(x);
+				}
+				// if(document.getElementById("project3Title").innerHTML == projectString3){
+				// 	organize(x);
+				// }
+				// if(document.getElementById("project4Title").innerHTML == projectString4){
+				// 	organize(x);
+				// }
+				if(document.getElementById("project1Title").innerHTML !== projectString){					
+				$('.project1').addClass('animated slideOutRight');
+				setTimeout(organize, 1000, x);
+				}
+				if(document.getElementById("project2Title").innerHTML !== projectString2){					
+				$('.project2').addClass('animated slideOutRight');
+				setTimeout(organize, 1000, x);
+				}
+				if(document.getElementById("project3Title").innerHTML !== projectString3){					
+				$('.project3').addClass('animated slideOutRight');
+				setTimeout(organize, 1000, x);
+				}
+				// console.log('showing')
+				// $('.project1').addClass('animated slideOutRight');
+				// $('.project2').addClass('animated slideOutRight');
+				// $('.project3').addClass('animated slideOutRight');
+				// console.log('0')
+				// setTimeout(organize, 1000, x);
+			}else{ organize(x);}
+			function organize(){
+
 					if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] !== undefined){
 						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
