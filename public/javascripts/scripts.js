@@ -85,11 +85,20 @@ const starFoodieSkills = {
 var projects = [pygameSkills, shoeboxSkills, starFoodieSkills]
 console.log(projects)
 function organize(x){
-	if($(".project1").show()){
+	if($(".project1").is(':visible')){
 		console.log('showing')
 		$('.project1').addClass('animated slideOutRight');
+		$('.project2').addClass('animated slideOutRight');
+		$('.project3').addClass('animated slideOutRight');
 		setTimeout(checkProjects, 1000, x);
+	}else{
+		checkProjects(x)
 	}
+	// 	else if($(".project2").show()){
+	// 	console.log('showing')
+	// 	$('.project2').addClass('animated slideOutRight');
+	// 	setTimeout(checkProjects, 1000, x);
+	// }
 	// if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] !== undefined){
 
 	// }
