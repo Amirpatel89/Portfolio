@@ -40,6 +40,7 @@ footer {
   background-color: lightblue;
   border: 2px solid green;
   max-height: 100%;
-  margin: 10px; }
+  margin: 10px;
+  transition-duration: 1s; }
 
 /*# sourceMappingURL=styles.css.map */

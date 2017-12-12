@@ -2,6 +2,7 @@ $( document ).ready(function() {
 	$(".project1").hide()
 	$(".project2").hide()
 	$(".project3").hide()
+	$(".project4").hide()
 });
 const finalProjectSkills = {
 	python: 'no',
@@ -80,7 +81,7 @@ const starFoodieSkills = {
 	caption: 'This is an app for easily finding the nearest high rated restaurant near your location.',
 	all: 'yes'
 }
-var projects = [pygameSkills, shoeboxSkills, starFoodieSkills]
+var projects = [pygameSkills, shoeboxSkills, starFoodieSkills, finalProjectSkills]
 console.log(projects)
 
 	// 	else if($(".project2").show()){
@@ -128,42 +129,75 @@ console.log(projects)
 			};
 			var cleanProjectObject = _.omit(projectObject, [undefined]);
 			var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
-			console.log(projectString);
+			console.log(cleanProjectObject);
 			if($(".project1").is(':visible')){
-				if(document.getElementById("project1Title").innerHTML == projectString){
+				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString){
+					$('.project1').addClass('animated pulse');
+					$('.project2').addClass('animated pulse');
+					$('.project3').addClass('animated pulse');
+					
+					// $('.project1').removeClass('animated pulse');
+					// $('.project2').removeClass('animated pulse');
+					// $('.project3').removeClass('animated pulse');
+					console.log('sames');
 					organize(x);
 				}
-				if(document.getElementById("project2Title").innerHTML == projectString2){
-					organize(x);
+				else if(document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project3Title").innerHTML !== projectString3 && document.getElementById("project1Title").innerHTML == projectString){
+						$('.project3').addClass('animated slideOutRight');
+						console.log('first 2 are same');
+
+					setTimeout(organize, 1000, x);
 				}
-				// if(document.getElementById("project3Title").innerHTML == projectString3){
-				// 	organize(x);
-				// }
-				// if(document.getElementById("project4Title").innerHTML == projectString4){
-				// 	organize(x);
-				// }
-				if(document.getElementById("project1Title").innerHTML !== projectString){					
+				else if(document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project2Title").innerHTML !== projectString2){
+						$('.project2').addClass('animated slideOutRight');
+						$('.project3').addClass('animated slideOutRight');
+
+						console.log('only 1 is same');
+
+					setTimeout(organize, 1000, x);
+				}
+				else if(document.getElementById("project3Title").innerHTML !== projectString3 | document.getElementById("project3Title").innerHTML !== undefined){					
 				$('.project1').addClass('animated slideOutRight');
-				setTimeout(organize, 1000, x);
-				}
-				if(document.getElementById("project2Title").innerHTML !== projectString2){					
 				$('.project2').addClass('animated slideOutRight');
-				setTimeout(organize, 1000, x);
-				}
-				if(document.getElementById("project3Title").innerHTML !== projectString3){					
 				$('.project3').addClass('animated slideOutRight');
+				console.log('3 is not the same');
+				
 				setTimeout(organize, 1000, x);
 				}
+				else if(document.getElementById("project2Title").innerHTML !== projectString2 | document.getElementById("project2Title").innerHTML !== undefined){					
+				$('.project1').addClass('animated slideOutRight');
+				$('.project2').addClass('animated slideOutRight');
+				$('.project3').addClass('animated slideOutRight');
+				console.log('2 is not the same');
+				setTimeout(organize, 1000, x);
+				}
+				else if(document.getElementById("project1Title").innerHTML !== projectString){					
+				$('.project1').addClass('animated slideOutRight');
+				$('.project2').addClass('animated slideOutRight');
+				$('.project3').addClass('animated slideOutRight');
+				console.log('none are same');
+				setTimeout(organize, 1000, x);
+				}
+				// if(document.getElementById("project2Title").innerHTML !== projectString2){					
+				// $('.project2').addClass('animated slideOutRight');
+				// setTimeout(organize, 1000, x);
+				// }
+				// if(document.getElementById("project3Title").innerHTML !== projectString3){					
+				// $('.project3').addClass('animated slideOutRight');
+				// setTimeout(organize, 1000, x);
+				// }
 				// console.log('showing')
 				// $('.project1').addClass('animated slideOutRight');
 				// $('.project2').addClass('animated slideOutRight');
 				// $('.project3').addClass('animated slideOutRight');
 				// console.log('0')
 				// setTimeout(organize, 1000, x);
-			}else{ organize(x);}
+			}else{
+			console.log('else');
+			organize(x);
+			}
 			function organize(){
-
-					if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] !== undefined){
+				if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] !== undefined){
 						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
@@ -177,11 +211,11 @@ console.log(projects)
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
 						$('.project2').addClass('animated slideInRight');
-						$(".project1").show()
-						$(".project2").show()
+						$(".project1").show();
+						$(".project2").show();
 						$(".project3").removeClass("animated slideOutRight");
 						$('.project3').addClass('animated slideInRight');
-						$(".project3").show()
+						$(".project3").show();
 						console.log('4')
 				}
 				else if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] !== undefined && Object.keys(cleanProjectObject)[2] == undefined){
@@ -195,31 +229,30 @@ console.log(projects)
 					$(".project2").removeClass("animated slideOutRight");
 					$('.project1').addClass('animated slideInRight');
 					$('.project2').addClass('animated slideInRight');
-					$(".project1").show()
-					$(".project2").show()
+					$(".project1").show();
+					$(".project2").show();
 					$('.project3').addClass('animated slideOutRight');
-					console.log('1')
+					console.log('1');
 				}
 				else if (Object.keys(cleanProjectObject)[0] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
 					document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 					document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 					document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
 						$(".project1").removeClass("animated slideOutRight");
-						$(".project1").show()	
+						$(".project1").show();
 						$('.project1').addClass('animated slideInRight');
 						$('.project2').addClass('animated slideOutRight');
 						$('.project3').addClass('animated slideOutRight');
-						console.log('2')
+						console.log('2');
 				}
-			// if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
-			// }
-			else{
-				$('.project1').addClass('animated slideOutRight');
-				$('.project2').addClass('animated slideOutRight');
-				$('.project3').addClass('animated slideOutRight');
-				console.log('3')
+				else{
+					$('.project1').addClass('animated slideOutRight');
+					$('.project2').addClass('animated slideOutRight');
+					$('.project3').addClass('animated slideOutRight');
+					console.log('3');
+				}
 			}
-	}
+
 }
 
 
@@ -233,7 +266,6 @@ console.log(projects)
 // 				$('.project1').addClass('animated slideInRight');
 // 				$('.project2').addClass('animated slideOutRight');
 // }
-
 
 
 
