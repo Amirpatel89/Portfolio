@@ -11,7 +11,6 @@ const eCommerceSkills = {
 	node: 'yes',
 	express: 'yes',
 	jQuery: 'yes',
-	lodash: 'no',
 	mySQL: 'yes',
 	html: 'yes',
 	css: 'yes',
@@ -19,7 +18,6 @@ const eCommerceSkills = {
 	bootstrap: 'yes',
 	materialize: 'no',
 	react: 'yes',
-	redux: 'yes',
 	name: 'ECommerce',
 	caption: 'An E Commerce Site...in production',
 	all: 'yes'		
@@ -31,7 +29,6 @@ const finalProjectSkills = {
 	node: 'yes',
 	express: 'yes',
 	jQuery: 'yes',
-	lodash: 'yes',
 	mySQL: 'yes',
 	html: 'yes',
 	css: 'yes',
@@ -39,9 +36,8 @@ const finalProjectSkills = {
 	bootstrap: 'yes',
 	materialize: 'yes',
 	react: 'yes',
-	redux: 'yes',
 	name: 'FinalProject',
-	caption: 'My Final Project',
+	caption: 'My Final DigitalCrafts Project...in development',
 	all: 'yes'		
 
 }
@@ -51,7 +47,6 @@ const pygameSkills = {
 	node: 'no',
 	express: 'no',
 	jQuery: 'no',
-	lodash: 'no',
 	mySQL: 'no',
 	html: 'no',
 	css: 'no',
@@ -59,7 +54,6 @@ const pygameSkills = {
 	bootstrap: 'no',
 	materialize: 'no',
 	react: 'no',
-	redux: 'no',
 	name: 'Pygame',
 	caption: 'A simple game made solely in Python',
 	all: 'yes'
@@ -70,7 +64,6 @@ const shoeboxSkills = {
 	node: 'yes',
 	express: 'yes',
 	jQuery: 'yes',
-	lodash: 'no',
 	mySQL: 'yes',
 	html: 'yes',
 	css: 'yes',
@@ -78,7 +71,6 @@ const shoeboxSkills = {
 	bootstrap: 'yes',
 	materialize: 'no',
 	react: 'no',
-	redux: 'no',
 	name: 'Shoebox',
 	caption: 'A site for allowing foster children the opportunity to have professional photos taken throughout childhood.',
 	all: 'yes'
@@ -89,7 +81,6 @@ const starFoodieSkills = {
 	node: 'no',
 	express: 'no',
 	jQuery: 'yes',
-	lodash: 'no',
 	mySQL: 'no',
 	html: 'yes',
 	css: 'yes',
@@ -97,7 +88,6 @@ const starFoodieSkills = {
 	bootstrap: 'yes',
 	materialize: 'no',
 	react: 'no',
-	redux: 'no',
 	name: 'StarFoodie',
 	caption: 'This is an app for easily finding the nearest high rated restaurant near your location.',
 	all: 'yes'
@@ -105,21 +95,6 @@ const starFoodieSkills = {
 var projects = [finalProjectSkills, eCommerceSkills, shoeboxSkills, starFoodieSkills, pygameSkills]
 console.log(projects)
 
-	// 	else if($(".project2").show()){
-	// 	console.log('showing')
-	// 	$('.project2').addClass('animated slideOutRight');
-	// 	setTimeout(checkProjects, 1000, x);
-	// }
-	// if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] !== undefined){
-
-	// }
-	// if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] !== undefined && Object.keys(cleanProjectObject)[2] == undefined){
-
-	// }
-	// if (Object.keys(cleanProjectObject)[0] !== undefined && Object.keys(cleanProjectObject)[1] == undefined){
-
-	// }
-	// setTimeout(checkProjects(x)), 3000;
 	function checkProjects(x){
 			returnArray = [];
 			returnCaptions = [];
@@ -168,12 +143,6 @@ console.log(projects)
 					console.log('sames');
 					organize(x);
 				}
-				// else if(document.getElementById("projectTitle").innerHTML == projectString2 && document.getElementById("project3Title").innerHTML !== projectString3 && document.getElementById("project1Title").innerHTML == projectString){
-				// 		$('.project4').addClass('animated slideOutRight');
-				// 		console.log('first 2 are same');
-
-				// 	setTimeout(organize, 1000, x);
-				// }
 				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML !== projectString4){
 					$('.project4').addClass('animated slideOutRight');
 
@@ -229,20 +198,6 @@ console.log(projects)
 				console.log('none are same');
 				setTimeout(organize, 1000, x);
 				}
-				// if(document.getElementById("project2Title").innerHTML !== projectString2){					
-				// $('.project2').addClass('animated slideOutRight');
-				// setTimeout(organize, 1000, x);
-				// }
-				// if(document.getElementById("project3Title").innerHTML !== projectString3){					
-				// $('.project3').addClass('animated slideOutRight');
-				// setTimeout(organize, 1000, x);
-				// }
-				// console.log('showing')
-				// $('.project1').addClass('animated slideOutRight');
-				// $('.project2').addClass('animated slideOutRight');
-				// $('.project3').addClass('animated slideOutRight');
-				// console.log('0')
-				// setTimeout(organize, 1000, x);
 			}else{
 			console.log('else');
 			organize(x);
@@ -334,17 +289,8 @@ console.log(projects)
 }
 
 
-// function checkPython(){
-// 			document.getElementById("pythonTitle").innerHTML = 'Pygame';
-// 			document.getElementById("pythonPic").src = 'images/' + 'Pygame' + '.jpg';
-// 			document.getElementById("pythonCaption").innerHTML = pygameSkills.caption;
 
-// 				$(".project1").removeClass("animated slideOutRight");
-// 				$(".project1").show()	
-// 				$('.project1').addClass('animated slideInRight');
-// 				$('.project2').addClass('animated slideOutRight');
-// }
-
+// sadfjla;skdjfalkdsj
 
 
 

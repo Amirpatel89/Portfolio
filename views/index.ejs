@@ -18,59 +18,65 @@
 				</div>
 			</div>
 			<div class="row">	
-				<div id="Skills" class="col s6">
+				<div id="Skills">
 					<h1>Skills</h1>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('python');">Python</button>
-						<div id = "python"></div>
+					<h2>Click on a Skill to view relevant projects.<h2>
+					<div class="skills-row-1 col s12">
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('python');">Python</button>
+							<div id = "python"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('javascript');">Javascript</button>
+							<div id = "javascript"></div>
+						
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('node');">Node.js</button>
+							<div id = "node"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('express');">Express</button>
+							<div id = "express"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('jQuery');">jQuery</button>
+							<div id = "jQuery"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('mySQL');">mySql</button>
+							<div id = "mySQL"></div>
 					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('javascript');">Javascript</button>
-						<div id = "javascript"></div>
-					
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('node');">Node</button>
-						<div id = "node"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('express');">Express</button>
-						<div id = "express"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('jQuery');">jQuery</button>
-						<div id = "jQuery"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('mySQL');">mySql</button>
-						<div id = "mySQL"></div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('html');">HTML5</button>
-						<div id = "html"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('css');">CSS3</button>
-						<div id = "css"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('ajax');">AJAX</button>
-						<div id = "ajax"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('bootstrap');">Bootstrap</button>
-						<div id = "bootstrap"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('materialize');">Materialize</button>
-						<div id = "materialize"></div>
-					</div>
-					<div>
-						<button class="waves-effect waves-light btn-large" onclick="checkProjects('react');">React</button>
-						<div id = "react"></div>
+					<div class="skills-row-2 col s12">
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('html');">HTML5</button>
+							<div id = "html"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('css');">CSS3</button>
+							<div id = "css"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('ajax');">AJAX</button>
+							<div id = "ajax"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('bootstrap');">Bootstrap</button>
+							<div id = "bootstrap"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('materialize');">Materialize</button>
+							<div id = "materialize"></div>
+						</div>
+						<div class="col s2">
+							<button class="waves-effect waves-light btn-large" onclick="checkProjects('react');">React/Redux</button>
+							<div id = "react"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-				<div class="col s6 project-list">
+			<div class="row">
+				<div class="col offset-s2 s8 project-list">
 					<div class = "project1 col s12 project-box">
 						<div id="project1Title" class="project-title col s12"></div>
 						<img id="project1Pic" class="project-picture col s6" src="">
@@ -81,11 +87,6 @@
 						<img id="project2Pic" class="project-picture col s6" src="">
 						<div id ="project2Caption" class="project-caption col s6"></div>
 					</div>
-<!-- 					<div class="project-python col s12 project-box">
-						<div id="pythonTitle" class="project-title col s12"></div>
-						<img id="pythonPic" class="project-picture col s6" src="">
-						<div id ="pythonCaption" class="project-caption col s6"></div>
-					</div> -->
 					<div class="project3 col s12 project-box">
 						<div id="project3Title" class="project-title col s12"></div>
 						<img id="project3Pic" class="project-picture col s6" src="">
@@ -97,6 +98,7 @@
 						<div id ="project4Caption" class="project-caption col s6"></div>
 					</div>
 				</div>
+			</div>
 		</div>
 		<section id="Contact-Me" class="wrapper">
                 <h2>Contact-Me</h2>
@@ -107,13 +109,14 @@
                     </div>
                     <div class="field">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" value="" maxlength="50" required="">
+                        <input type="email" name="email" id="email" value="" maxlength="50" required="">
                     </div>
                     <div class="field">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="6" maxlength="200" placeholder="Please write a brief message. I'm excited to hear from you!"></textarea>
+                        <textarea name="message" id="message" rows="6" maxlength="200" required="" placeholder="Please write a brief message. I'm excited to hear from you!"></textarea>
                     </div>
                     <button type="submit">Send</button>
+                    <div class="thank-you"></div>
                 </form>
       
         </section>

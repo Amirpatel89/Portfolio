@@ -34,6 +34,7 @@ router.post('/contact', (req, res, next)=>{
 			throw error;
 		}else{
 		res.redirect('/?msg=received');
+		// $('.thank-you').innerHTML == "Thank you! Message saved to Database.";
 
 		}
 	});
