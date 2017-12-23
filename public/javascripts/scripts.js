@@ -131,20 +131,35 @@ console.log(projects)
 			var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
 			console.log(cleanProjectObject);
 			if($(".project1").is(':visible')){
-				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML == projectString4){
-					$('.project1').addClass('animated flash');
-					$('.project2').addClass('animated flash');
-					$('.project3').addClass('animated flash');
-					$('.project4').addClass('animated flash');
+				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML == projectString4 && document.getElementById("project5Title").innerHTML == projectString5){
+					// $('.project1').addClass('animated flash');
+					// $('.project2').addClass('animated flash');
+					// $('.project3').addClass('animated flash');
+					// $('.project4').addClass('animated flash');
+					// $('.project5').addClass('animated flash');
 
 					// $('.project1').removeClass('animated pulse');
 					// $('.project2').removeClass('animated pulse');
 					// $('.project3').removeClass('animated pulse');
-					console.log('sames');
+					console.log('first 5 are same');
 					organize(x);
 				}
-				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML !== projectString4){
+				else if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML == projectString4 && document.getElementById("project5Title").innerHTML !== projectString5){
+					// $('.project1').addClass('animated flash');
+					// $('.project2').addClass('animated flash');
+					// $('.project3').addClass('animated flash');
+					// $('.project4').addClass('animated flash');
+					$('.project5').addClass('animated slideOutRight');
+
+					// $('.project1').removeClass('animated pulse');
+					// $('.project2').removeClass('animated pulse');
+					// $('.project3').removeClass('animated pulse');
+					console.log('first 4 are same');
+					setTimeout(organize, 1000, x);
+				}
+				else if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML !== projectString4){
 					$('.project4').addClass('animated slideOutRight');
+					$('.project5').addClass('animated slideOutRight');
 
 
 					// $('.project1').removeClass('animated pulse');
@@ -156,6 +171,7 @@ console.log(projects)
 				else if(document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project3Title").innerHTML !== projectString3 && document.getElementById("project1Title").innerHTML == projectString){
 						$('.project3').addClass('animated slideOutRight');
 						$('.project4').addClass('animated slideOutRight');
+						$('.project5').addClass('animated slideOutRight');
 						console.log('first 2 are same');
 
 
@@ -165,6 +181,7 @@ console.log(projects)
 						$('.project2').addClass('animated slideOutRight');
 						$('.project3').addClass('animated slideOutRight');
 						$('.project4').addClass('animated slideOutRight');
+						$('.project5').addClass('animated slideOutRight');
 
 						console.log('only 1 is same');
 
@@ -175,6 +192,7 @@ console.log(projects)
 				$('.project2').addClass('animated slideOutRight');
 				$('.project3').addClass('animated slideOutRight');
 				$('.project4').addClass('animated slideOutRight');
+				$('.project5').addClass('animated slideOutRight');
 				console.log('3 is not the same');
 				console.log(projectString3)
 				console.log(document.getElementById("project3Title").innerHTML);
@@ -186,6 +204,7 @@ console.log(projects)
 				$('.project2').addClass('animated slideOutRight');
 				$('.project3').addClass('animated slideOutRight');
 				$('.project4').addClass('animated slideOutRight');
+				$('.project5').addClass('animated slideOutRight');
 				console.log('2 is not the same');
 				setTimeout(organize, 1000, x);
 				}
@@ -194,6 +213,7 @@ console.log(projects)
 				$('.project2').addClass('animated slideOutRight');
 				$('.project3').addClass('animated slideOutRight');
 				$('.project4').addClass('animated slideOutRight');
+				$('.project5').addClass('animated slideOutRight');
 
 				console.log('none are same');
 				setTimeout(organize, 1000, x);
@@ -201,9 +221,43 @@ console.log(projects)
 			}else{
 			console.log('else');
 			organize(x);
+
 			}
 			function organize(){
-					if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] && Object.keys(cleanProjectObject)[3] !== undefined){
+					if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] && Object.keys(cleanProjectObject)[3] && Object.keys(cleanProjectObject)[4]!== undefined){
+						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
+						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
+						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
+						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
+						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
+						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
+						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
+						document.getElementById("project4Title").innerHTML = Object.keys(cleanProjectObject)[3];
+						document.getElementById("project4Pic").src = 'images/' + Object.keys(cleanProjectObject)[3] + '.jpg';
+						document.getElementById("project4Caption").innerHTML = cleanProjectCaptions[3];
+						document.getElementById("project5Title").innerHTML = Object.keys(cleanProjectObject)[4];
+						document.getElementById("project5Pic").src = 'images/' + Object.keys(cleanProjectObject)[4] + '.jpg';
+						document.getElementById("project5Caption").innerHTML = cleanProjectCaptions[4];
+						$(".project1").removeClass("animated slideOutRight");
+						$(".project2").removeClass("animated slideOutRight");
+						$('.project1').addClass('animated slideInRight');
+						$('.project2').addClass('animated slideInRight');
+						$(".project1").show();
+						$(".project2").show();
+						$(".project3").removeClass("animated slideOutRight");
+						$('.project3').addClass('animated slideInRight');
+						$(".project3").show();
+						$(".project4").removeClass("animated slideOutRight");
+						$('.project4').addClass('animated slideInRight');
+						$(".project4").show();
+						$(".project5").removeClass("animated slideOutRight");
+						$('.project5').addClass('animated slideInRight');
+						$(".project5").show();
+						console.log('6')
+					}
+					else if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] && Object.keys(cleanProjectObject)[3] !== undefined && Object.keys(cleanProjectObject)[4] == undefined){
 						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
@@ -290,7 +344,7 @@ console.log(projects)
 
 
 
-// sadfjla;skdjfalkdsj
+
 
 
 
