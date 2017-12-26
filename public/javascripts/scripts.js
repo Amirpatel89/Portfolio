@@ -346,7 +346,7 @@ console.log(projects)
 
 
 
-/////else if or else not
+/////add a picture and clean up skills portion to make smaller
 
 
 
