@@ -2,7 +2,7 @@
  
 
 body{
-	background-color: lightgrey;
+	background-color: white;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -41,8 +41,8 @@ footer{
 #Featured-Project{
 	background-color: lightblue;
 }
-.container{
-	min-width: 90vw;
+.page-top{
+	margin-bottom: -20px;
 }
 #Contact-Me{
 	border: 1px solid green;
@@ -70,6 +70,5 @@ footer{
 		height: 50px;
 	}
 }
-
 
 
