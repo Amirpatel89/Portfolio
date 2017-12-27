@@ -46,4 +46,16 @@ footer {
 #project1Pic img {
   height: 50px; }
 
+.introduction {
+  color: white;
+  position: absolute;
+  margin-top: 15%;
+  left: 45%;
+  font-size: 44px;
+  border: 5px solid white;
+  border-radius: 5px; }
+
+.intro-all {
+  position: relative; }
+
 /*# sourceMappingURL=styles.css.map */
