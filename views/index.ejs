@@ -9,13 +9,18 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="container-fluid intro-all col s12">
-					<img id="classroom-pic" class="col s12" src="images/classroom.jpg">
-<!-- 					<div class="introduction">
-						Hello, my name is Amir Patel.<br>
-						I am a Full Stack Developer.
-					</div> -->
-				</div>
-				<div id= "About-Me" class="col s12">I'm a Full Stack Engineer. Hire Me. I'm Awesome
+					<div id="About-Me" class="col s6">
+						<h1>Hello!</h1>
+						<p1>
+						My name is Amir Patel and I am a Full Stack Developer living in Atlanta, Ga.<br><br>
+						</p1>
+						<p2>
+						I am a graduate of DigitalCrafts' four month, full-time immersive coding bootcamp as of January 2018.  I have developed many skills necessary to be successful as a software engineer in a world that requires collaboration, creativity, passion, and hard-work.  	
+						</p2>
+
+					</div>
+					<img id="me-pic" class="col s6" src="images/me.jpg">
+
 				</div>
 				<div id ="Featured-Project" class="col s12">
 					<h1>Featured Project</h1>
@@ -105,26 +110,29 @@
 				</div>
 			</div>
 		</div>
-		<section id="Contact-Me" class="wrapper">
-                <h2>Contact-Me</h2>
-                <form action="/contact" method="post" id="myform">
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" value="" maxlength="50">
-                    </div>
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" value="" maxlength="50" required="">
-                    </div>
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="6" maxlength="200" required="" placeholder="Please write a brief message. I'm excited to hear from you!"></textarea>
-                    </div>
-                    <button type="submit">Send</button>
-                    <div class="thank-you"></div>
-                </form>
-      
-        </section>
+		<div class="container">
+			<div class="row">	
+				<section id="Contact-Me" class="wrapper">
+		                <h2>Contact-Me</h2>
+		                <form action="/contact" method="post" id="myform">
+		                    <div class="field">
+		                        <label for="name">Name</label>
+		                        <input type="text" name="name" id="name" value="" maxlength="50">
+		                    </div>
+		                    <div class="field">
+		                        <label for="email">Email</label>
+		                        <input type="email" name="email" id="email" value="" maxlength="50" required="">
+		                    </div>
+		                    <div class="field">
+		                        <label for="message">Message</label>
+		                        <textarea name="message" id="message" rows="6" maxlength="200" required="" placeholder="Please write a brief message. I'm excited to hear from you!"></textarea>
+		                    </div>
+		                    <button type="submit">Send</button>
+		                    <div class="thank-you"></div>
+		                </form>
+		        </section>
+		    </div>
+		</div>
 	</main>
 <footer class="page-footer teal lighten-3">
 	<% include footer %>
