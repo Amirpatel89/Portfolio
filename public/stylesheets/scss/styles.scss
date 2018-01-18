@@ -1,5 +1,8 @@
+// .waves-effect{
+// 	background-color: lightgrey;
 
- 
+// }
+
 
 body{
 	background-color: white;
@@ -8,7 +11,7 @@ body{
     flex-direction: column;
     max-width: 100vw;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    color: rgba(0,100,100,1);
+
 
 }
 
@@ -39,6 +42,7 @@ footer{
 	padding-left: 8px;
 	padding-right: 8px;
 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9);
+	margin: 3px;
 
 }
 .nav-name{
@@ -68,7 +72,7 @@ footer{
 		text-align: center;
 		color: rgba(0,100,100,1);
 	}
-	h2{
+	h3{
 		text-align: center;
 		color: rgba(0,100,100,1);
 	}
@@ -99,12 +103,22 @@ footer{
 }
 #Contact-Me{
 	text-align: center;
-
 	#myform{
 		.send{
 			font-size: 30px;
 		}
+		.field{
+			label{
+				color: rgba(0,100,100,1);
+				font-size: 18px;
+			}
+
+		}
 	}
+}
+.Contact-Me{
+	text-align: center;
+	color: rgba(0,100,100,1);
 }
 
 
@@ -128,4 +142,44 @@ footer{
 	position: relative;
 }
 
+ul li{
+	display: inline-block;
+}
 
+.icons{
+	text-align: center;	
+	p{
+		font-size: 16px;
+		color: rgba(0,100,100,1);
+
+	}
+}
+.fa{
+	color: rgba(0,100,100,1);
+	border-color: lightgrey;
+	display: inline-block;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgrey;
+    color: rgba(0,100,100,1);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 18px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

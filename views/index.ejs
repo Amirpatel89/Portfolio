@@ -38,7 +38,7 @@
 			<div class="row">	
 				<div id="Skills">
 					<h1>Skills</h1>
-					<h2>Click on a Skill to view relevant projects.<h2>
+					<h3>Click on a Skill to view relevant projects:<h3>
 					<div class="col s12 view-all">
 						<button class="waves-effect waves-light btn-large skill-btn" onclick="checkProjects('all');">View All</button>	
 					</div>
@@ -116,16 +116,16 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<h1>Contact Me</h1>	
+				<h1 class="Contact-Me">Contact Me</h1>	
 				<section id="Contact-Me" class="wrapper">     
 		                <form action="/contact" method="post" id="myform">
 		                    <div class="field col s6">
 		                        <label for="name">Name</label>
-		                        <input type="text" name="name" id="name" value="" maxlength="50">
+		                        <input type="text" name="name" id="name" value="" maxlength="50" placeholder="Your name">
 		                    </div>
 		                    <div class="field col s6">
 		                        <label for="email">Email</label>
-		                        <input type="email" name="email" id="email" value="" maxlength="90" required="">
+		                        <input type="email" name="email" id="email" value="" maxlength="90" required="" placeholder="Your email">
 		                    </div>
 		                    <div class="field col s12">
 		                        <label for="message">Message</label>
@@ -136,7 +136,24 @@
 		                </form>
 		        </section>
 		    </div>
-		</div>
+			<div class="row icons">
+				<p>More Resources:</p>
+			    <ul>
+			        <li><a href="https://github.com/Amirpatel89"><i class="tooltip fa fa-github fa-3x fa-border">
+			        	<span class="tooltiptext">My Github</span>
+			        </i></a></li>
+			        <li><a href="https://www.linkedin.com/in/amirpatel89/" ><i class="tooltip fa fa-3x fa-border fa-linkedin">
+			        	<span class="tooltiptext">My Linkedin</span>
+			        </i></a></li>
+					<li><a href="mailto:amirpatel89@gmail.com"><i class="tooltip fa fa-envelope fa-3x fa-border" aria-hidden="true">
+						<span class="tooltiptext">Email Me</span>
+					</i></a></li>
+					<li><a href="/resume"><i class="tooltip fa fa-file fa-3x fa-border" aria-hidden="true">
+						<span class="tooltiptext">My Resume</span>
+					</i></a></li>
+
+			    </ul>
+			</div>
 	</main>
 <footer class="page-footer teal lighten-3">
 	<% include footer %>

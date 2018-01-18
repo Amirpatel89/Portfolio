@@ -20,7 +20,7 @@ connection.connect((error)=>{
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' })
+  res.render('index', {})
 });
 
 
@@ -38,6 +38,10 @@ router.post('/contact', (req, res, next)=>{
 
 		}
 	});
+});
+
+router.get('/resume', function(req, res, next){
+	res.render('resume', {})
 });
 
 
