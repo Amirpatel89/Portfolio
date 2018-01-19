@@ -21,24 +21,26 @@ const eCommerceSkills = {
 	react: 'yes',
 	name: 'ECommerce',
 	caption: 'An E-Commerce site made using React/Redux and Node.js(Development Only)',
+	github: 'https://github.com/Amirpatel89/E-Commerce-Site',
 	all: 'yes'		
 
 }
 const easyPCSkills = {
-	python: 'no',
-	javascript: 'yes',
+	python: 'yes',
+	javascript: 'no',
 	node: 'yes',
 	express: 'yes',
-	jQuery: 'yes',
+	jQuery: 'no',
 	mySQL: 'yes',
 	html: 'yes',
 	css: 'yes',
-	ajax: 'yes',
-	bootstrap: 'yes',
+	ajax: 'no',
+	bootstrap: 'no',
 	materialize: 'yes',
-	react: 'yes',
+	react: 'no',
 	name: 'Easy-PC',
 	caption: 'Aggregate prices for PCs and PC parts.  A web scraper made with Python and mySQL',
+	github: 'https://github.com/Amirpatel89/News-Aggregator',
 	all: 'yes'		
 
 }
@@ -57,6 +59,7 @@ const pygameSkills = {
 	react: 'no',
 	name: 'Pygame',
 	caption: 'A simple game made solely in Python',
+	github: 'Coming Soon',
 	all: 'yes'
 }
 const shoeboxSkills = {
@@ -74,6 +77,7 @@ const shoeboxSkills = {
 	react: 'no',
 	name: 'Shoebox',
 	caption: 'A site for allowing foster children the opportunity to have professional photos taken throughout childhood.',
+	github: 'https://github.com/Amirpatel89/shoebox/tree/master/Shoebox-Project-full',
 	all: 'yes'
 }
 const starFoodieSkills = {
@@ -91,6 +95,7 @@ const starFoodieSkills = {
 	react: 'no',
 	name: 'StarFoodie',
 	caption: 'This is an app for easily finding the nearest high rated restaurant near your location.',
+	github: 'https://github.com/Amirpatel89/Front-End-Final',
 	all: 'yes'
 }
 var projects = [easyPCSkills, eCommerceSkills, shoeboxSkills, starFoodieSkills, pygameSkills]
@@ -99,6 +104,7 @@ console.log(projects)
 	function checkProjects(x){
 			returnArray = [];
 			returnCaptions = [];
+			returnGithub = [];
 			projectString = "";
 			projectString2 = "";
 			projectString3 = "";
@@ -108,6 +114,7 @@ console.log(projects)
 				if(projects[i][x] == 'yes'){
 					returnArray.push(projects[i].name)
 					returnCaptions.push(projects[i].caption)
+					returnGithub.push(projects[i].github)
 				}
 			}
 			console.log(returnCaptions)
@@ -130,6 +137,7 @@ console.log(projects)
 			};
 			var cleanProjectObject = _.omit(projectObject, [undefined]);
 			var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
+			var cleanProjectGithub = _.omit(returnGithub, [undefined]);
 			console.log(cleanProjectObject);
 			if($(".project1").is(':visible')){
 				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML == projectString4 && document.getElementById("project5Title").innerHTML == projectString5){
@@ -229,18 +237,23 @@ console.log(projects)
 						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+						document.getElementById("project1Github").innerHTML = cleanProjectGithub[0];
 						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+						document.getElementById("project2Github").innerHTML = cleanProjectGithub[1];
 						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
 						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
 						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
+						document.getElementById("project3Github").innerHTML = cleanProjectGithub[2];
 						document.getElementById("project4Title").innerHTML = Object.keys(cleanProjectObject)[3];
 						document.getElementById("project4Pic").src = 'images/' + Object.keys(cleanProjectObject)[3] + '.jpg';
 						document.getElementById("project4Caption").innerHTML = cleanProjectCaptions[3];
+						document.getElementById("project4Github").innerHTML = cleanProjectGithub[3];
 						document.getElementById("project5Title").innerHTML = Object.keys(cleanProjectObject)[4];
 						document.getElementById("project5Pic").src = 'images/' + Object.keys(cleanProjectObject)[4] + '.jpg';
 						document.getElementById("project5Caption").innerHTML = cleanProjectCaptions[4];
+						document.getElementById("project5Github").innerHTML = cleanProjectGithub[4];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
@@ -262,15 +275,19 @@ console.log(projects)
 						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+						document.getElementById("project1Github").innerHTML = cleanProjectGithub[0];
 						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+						document.getElementById("project2Github").innerHTML = cleanProjectGithub[1];
 						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
 						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
 						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
+						document.getElementById("project3Github").innerHTML = cleanProjectGithub[2];
 						document.getElementById("project4Title").innerHTML = Object.keys(cleanProjectObject)[3];
 						document.getElementById("project4Pic").src = 'images/' + Object.keys(cleanProjectObject)[3] + '.jpg';
 						document.getElementById("project4Caption").innerHTML = cleanProjectCaptions[3];
+						document.getElementById("project4Github").innerHTML = cleanProjectGithub[3];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
@@ -289,12 +306,15 @@ console.log(projects)
 						document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+						document.getElementById("project1Github").innerHTML = cleanProjectGithub[0];
 						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+						document.getElementById("project2Github").innerHTML = cleanProjectGithub[1];
 						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
 						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
 						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
+						document.getElementById("project3Github").innerHTML = cleanProjectGithub[2];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
@@ -310,9 +330,11 @@ console.log(projects)
 					document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 					document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 					document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+					document.getElementById("project1Github").innerHTML = cleanProjectGithub[0];
 					document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 					document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 					document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
+					document.getElementById("project2Github").innerHTML = cleanProjectGithub[1];
 					$(".project1").removeClass("animated slideOutRight");
 					$(".project2").removeClass("animated slideOutRight");
 					$('.project1').addClass('animated slideInRight');
@@ -326,6 +348,7 @@ console.log(projects)
 					document.getElementById("project1Title").innerHTML = Object.keys(cleanProjectObject)[0];
 					document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 					document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
+					document.getElementById("project1Github").innerHTML = cleanProjectGithub[0];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project1").show();
 						$('.project1').addClass('animated slideInRight');
