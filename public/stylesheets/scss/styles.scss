@@ -29,7 +29,7 @@ footer{
 .navbtn{
 	background-color: white;
 	color: rgba(0,100,100,1);
-	border-radius: 8px;
+	border-radius: 15px;
 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9);
 
 }
@@ -127,6 +127,7 @@ footer{
 	margin: 10px;
 	transition-duration: 1s;
 	color: white;
+	border-radius: 20px;
 
 }
 
@@ -192,6 +193,9 @@ ul li{
 	.navbtn{
 		background-color: rgba(0,100,100,0.9);
 	}
+	// #me-pic{
+	// 	margin-bottom: 10px;
+	// }
 }
 
 
