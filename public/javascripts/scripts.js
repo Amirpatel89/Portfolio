@@ -76,7 +76,7 @@ const shoeboxSkills = {
 	materialize: 'no',
 	react: 'no',
 	name: 'Shoebox',
-	caption: 'A site for allowing foster children the opportunity to have professional photos taken throughout childhood.',
+	caption: 'A site that allows foster children the opportunity to have professional photos taken throughout childhood.',
 	github: 'https://github.com/Amirpatel89/shoebox/tree/master/Shoebox-Project-full',
 	all: 'yes'
 }

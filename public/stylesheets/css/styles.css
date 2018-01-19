@@ -104,6 +104,9 @@ footer {
 .send {
   margin-top: 25px; }
 
+textarea {
+  height: auto !important; }
+
 ul li {
   display: inline-block; }
 
