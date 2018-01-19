@@ -20,11 +20,11 @@ const eCommerceSkills = {
 	materialize: 'no',
 	react: 'yes',
 	name: 'ECommerce',
-	caption: 'An E Commerce Site...in production',
+	caption: 'An E-Commerce site made using React/Redux and Node.js(Development Only)',
 	all: 'yes'		
 
 }
-const finalProjectSkills = {
+const easyPCSkills = {
 	python: 'no',
 	javascript: 'yes',
 	node: 'yes',
@@ -37,8 +37,8 @@ const finalProjectSkills = {
 	bootstrap: 'yes',
 	materialize: 'yes',
 	react: 'yes',
-	name: 'FinalProject',
-	caption: 'My Final DigitalCrafts Project...in development',
+	name: 'Easy-PC',
+	caption: 'Aggregate prices for PCs and PC parts.  A web scraper made with Python and mySQL',
 	all: 'yes'		
 
 }
@@ -93,7 +93,7 @@ const starFoodieSkills = {
 	caption: 'This is an app for easily finding the nearest high rated restaurant near your location.',
 	all: 'yes'
 }
-var projects = [finalProjectSkills, eCommerceSkills, shoeboxSkills, starFoodieSkills, pygameSkills]
+var projects = [easyPCSkills, eCommerceSkills, shoeboxSkills, starFoodieSkills, pygameSkills]
 console.log(projects)
 
 	function checkProjects(x){
