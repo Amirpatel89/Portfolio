@@ -94,7 +94,7 @@ const starFoodieSkills = {
 	materialize: 'no',
 	react: 'no',
 	name: 'StarFoodie',
-	caption: 'This is an app for easily finding the nearest high rated restaurant near your location.',
+	caption: 'This is an app for easily finding the nearest high-rated restaurant near your location.',
 	github: 'https://github.com/Amirpatel89/Front-End-Final',
 	all: 'yes'
 }
