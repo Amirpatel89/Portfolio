@@ -41,7 +41,6 @@ footer {
   font-size: 3vh; }
 
 #About-Me h1 {
-  margin-top: 100px;
   font-size: 66px;
   color: #006464; }
 #About-Me p1 {
@@ -148,6 +147,15 @@ ul li {
 
 @media (max-width: 768px) {
   .navbtn {
-    background-color: rgba(0, 100, 100, 0.9); } }
+    background-color: rgba(0, 100, 100, 0.9); }
+
+  .DC-pic {
+    width: 88vw; }
+
+  #About-Me p1 br {
+    display: none; } }
+@media (min-width: 768px) {
+  .DC-pic {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
