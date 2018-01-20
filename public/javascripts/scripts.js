@@ -4,7 +4,9 @@ $( document ).ready(function() {
 	$(".project3").hide()
 	$(".project4").hide()
 	$(".project5").hide()
-	$(".button-collapse").sideNav();
+	$(".button-collapse").sideNav({
+		closeOnClick: true
+	})
 });
 const eCommerceSkills = {
 	python: 'no',
