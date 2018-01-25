@@ -79,7 +79,7 @@ const shoeboxSkills = {
 	react: 'no',
 	name: 'Shoebox',
 	caption: 'A site that allows foster children the opportunity to have professional photos taken throughout childhood.',
-	github: 'https://github.com/Amirpatel89/shoebox/tree/master/Shoebox-Project-full',
+	github: 'https://github.com/Amirpatel89/Shoebox-Amir',
 	all: 'yes'
 }
 const starFoodieSkills = {
