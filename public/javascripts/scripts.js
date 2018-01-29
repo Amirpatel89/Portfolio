@@ -21,7 +21,7 @@ const eCommerceSkills = {
 	bootstrap: 'yes',
 	materialize: 'no',
 	react: 'yes',
-	name: 'ECommerce',
+	name: 'Stockpile Games',
 	caption: 'An E-Commerce site made using React/Redux and Node.js(Development Only)',
 	github: 'https://github.com/Amirpatel89/E-Commerce-Site',
 	all: 'yes'		
