@@ -97,7 +97,7 @@ const starFoodieSkills = {
 	react: 'no',
 	name: 'StarFoodie',
 	caption: 'This is an app for easily finding the nearest high-rated restaurant near your location.',
-	github: 'https://github.com/Amirpatel89/Front-End-Final',
+	github: 'https://github.com/Amirpatel89/StarFoodie',
 	all: 'yes'
 }
 var projects = [easyPCSkills, eCommerceSkills, shoeboxSkills, starFoodieSkills, pygameSkills]
