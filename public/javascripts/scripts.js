@@ -59,9 +59,9 @@ const pygameSkills = {
 	bootstrap: 'no',
 	materialize: 'no',
 	react: 'no',
-	name: 'Pygame',
-	caption: 'A simple game made solely in Python',
-	github: 'Coming Soon',
+	name: 'DBZ_Pygame',
+	caption: 'A simple game made solely in Python.  Dragon Ball Z Theme.',
+	github: 'https://github.com/Amirpatel89/DBZ_pygame',
 	all: 'yes'
 }
 const shoeboxSkills = {
