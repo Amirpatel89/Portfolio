@@ -34,7 +34,8 @@ footer {
   background-color: white;
   color: #006464;
   border-radius: 8px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9); }
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9);
+  margin-top: 30px; }
 
 .nav-name {
   color: black;
@@ -156,7 +157,10 @@ ul li {
     width: 88vw; }
 
   #About-Me p1 br {
-    display: none; } }
+    display: none; }
+
+  .proj-btn {
+    margin-top: 3px; } }
 @media (min-width: 768px) {
   .DC-pic {
     display: none; } }

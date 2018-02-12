@@ -22,8 +22,9 @@ const eCommerceSkills = {
 	materialize: 'no',
 	react: 'yes',
 	name: 'Stockpile Games',
-	caption: 'An E-Commerce site made using React/Redux and Node.js(Development Only)',
+	caption: 'An E-Commerce site made using React/Redux and Node.js(Development Only).',
 	github: 'https://github.com/Amirpatel89/E-Commerce-Site',
+	website: 'http://stockpilegames.amirpatel.net/',
 	all: 'yes'		
 
 }
@@ -41,8 +42,9 @@ const easyPCSkills = {
 	materialize: 'yes',
 	react: 'no',
 	name: 'Easy-PC',
-	caption: 'Aggregate prices for PCs and PC parts.  A web scraper made with Python and mySQL',
+	caption: 'Aggregate prices for PCs and PC parts.  A web scraper made with Python and mySQL(In development).',
 	github: 'https://github.com/Amirpatel89/News-Aggregator',
+	website: 'https://github.com/Amirpatel89/News-Aggregator',
 	all: 'yes'		
 
 }
@@ -62,6 +64,7 @@ const pygameSkills = {
 	name: 'DBZ_Pygame',
 	caption: 'A simple game made solely in Python.  Dragon Ball Z theme.',
 	github: 'https://github.com/Amirpatel89/DBZ_pygame',
+	website: '',
 	all: 'yes'
 }
 const shoeboxSkills = {
@@ -80,6 +83,7 @@ const shoeboxSkills = {
 	name: 'Shoebox',
 	caption: 'A site that allows foster children the opportunity to have professional photos taken throughout childhood.',
 	github: 'https://github.com/Amirpatel89/Shoebox-Amir',
+	website: 'http://shoebox.amirpatel.net/',
 	all: 'yes'
 }
 const starFoodieSkills = {
@@ -96,8 +100,9 @@ const starFoodieSkills = {
 	materialize: 'no',
 	react: 'no',
 	name: 'StarFoodie',
-	caption: 'This is an app for easily finding the nearest high-rated restaurant near your location.',
+	caption: 'This is an app for easily finding the nearest high-rated restaurant using your GPS location.',
 	github: 'https://github.com/Amirpatel89/StarFoodie',
+	website: 'https://starfoodie.amirpatel.net/',
 	all: 'yes'
 }
 var projects = [easyPCSkills, eCommerceSkills, shoeboxSkills, starFoodieSkills, pygameSkills]
@@ -107,6 +112,7 @@ console.log(projects)
 			returnArray = [];
 			returnCaptions = [];
 			returnGithub = [];
+			returnWebsite = [];
 			projectString = "";
 			projectString2 = "";
 			projectString3 = "";
@@ -117,9 +123,10 @@ console.log(projects)
 					returnArray.push(projects[i].name)
 					returnCaptions.push(projects[i].caption)
 					returnGithub.push(projects[i].github)
+					returnWebsite.push(projects[i].website)
 				}
 			}
-			console.log(returnCaptions)
+			// console.log(returnCaptions)
 			projectString += returnArray[0];
 			var projectLink = "/" + projectString
 			projectString2 += returnArray[1];
@@ -140,42 +147,21 @@ console.log(projects)
 			var cleanProjectObject = _.omit(projectObject, [undefined]);
 			var cleanProjectCaptions = _.omit(returnCaptions, [undefined]);
 			var cleanProjectGithub = _.omit(returnGithub, [undefined]);
-			console.log(cleanProjectObject);
+			var cleanProjectWebsite = _.omit(returnWebsite, [undefined]);
+			// console.log(cleanProjectWebsite);
 			if($(".project1").is(':visible')){
 				if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML == projectString4 && document.getElementById("project5Title").innerHTML == projectString5){
-					// $('.project1').addClass('animated flash');
-					// $('.project2').addClass('animated flash');
-					// $('.project3').addClass('animated flash');
-					// $('.project4').addClass('animated flash');
-					// $('.project5').addClass('animated flash');
-
-					// $('.project1').removeClass('animated pulse');
-					// $('.project2').removeClass('animated pulse');
-					// $('.project3').removeClass('animated pulse');
 					console.log('first 5 are same');
 					organize(x);
 				}
 				else if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML == projectString4 && document.getElementById("project5Title").innerHTML !== projectString5){
-					// $('.project1').addClass('animated flash');
-					// $('.project2').addClass('animated flash');
-					// $('.project3').addClass('animated flash');
-					// $('.project4').addClass('animated flash');
 					$('.project5').addClass('animated slideOutRight');
-
-					// $('.project1').removeClass('animated pulse');
-					// $('.project2').removeClass('animated pulse');
-					// $('.project3').removeClass('animated pulse');
 					console.log('first 4 are same');
 					setTimeout(organize, 1000, x);
 				}
 				else if(document.getElementById("project3Title").innerHTML == projectString3 && document.getElementById("project2Title").innerHTML == projectString2 && document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project4Title").innerHTML !== projectString4){
 					$('.project4').addClass('animated slideOutRight');
 					$('.project5').addClass('animated slideOutRight');
-
-
-					// $('.project1').removeClass('animated pulse');
-					// $('.project2').removeClass('animated pulse');
-					// $('.project3').removeClass('animated pulse');
 					console.log('first 3 are same');
 					setTimeout(organize, 1000, x);
 				}
@@ -184,8 +170,6 @@ console.log(projects)
 						$('.project4').addClass('animated slideOutRight');
 						$('.project5').addClass('animated slideOutRight');
 						console.log('first 2 are same');
-
-
 					setTimeout(organize, 1000, x);
 				}
 				else if(document.getElementById("project1Title").innerHTML == projectString && document.getElementById("project2Title").innerHTML !== projectString2){
@@ -193,9 +177,7 @@ console.log(projects)
 						$('.project3').addClass('animated slideOutRight');
 						$('.project4').addClass('animated slideOutRight');
 						$('.project5').addClass('animated slideOutRight');
-
 						console.log('only 1 is same');
-
 					setTimeout(organize, 1000, x);
 				}
 				else if(document.getElementById("project3Title").innerHTML !== projectString3 && document.getElementById("project3Title").innerHTML !== undefined){					
@@ -207,7 +189,6 @@ console.log(projects)
 				console.log('3 is not the same');
 				console.log(projectString3)
 				console.log(document.getElementById("project3Title").innerHTML);
-				
 				setTimeout(organize, 1000, x);
 				}
 				else if(document.getElementById("project2Title").innerHTML !== projectString2 && document.getElementById("project2Title").innerHTML !== undefined){					
@@ -225,14 +206,12 @@ console.log(projects)
 				$('.project3').addClass('animated slideOutRight');
 				$('.project4').addClass('animated slideOutRight');
 				$('.project5').addClass('animated slideOutRight');
-
 				console.log('none are same');
 				setTimeout(organize, 1000, x);
 				}
 			}else{
 			console.log('else');
 			organize(x);
-
 			}
 			function organize(){
 					if (Object.keys(cleanProjectObject)[0] && Object.keys(cleanProjectObject)[1] && Object.keys(cleanProjectObject)[2] && Object.keys(cleanProjectObject)[3] && Object.keys(cleanProjectObject)[4]!== undefined){
@@ -240,22 +219,27 @@ console.log(projects)
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
 						document.getElementById("project1Github").href = cleanProjectGithub[0];
+						document.getElementById("project1Website").href = cleanProjectWebsite[0];
 						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
 						document.getElementById("project2Github").href = cleanProjectGithub[1];
+						document.getElementById("project2Website").href = cleanProjectWebsite[1];
 						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
 						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
 						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
 						document.getElementById("project3Github").href = cleanProjectGithub[2];
+						document.getElementById("project3Website").href = cleanProjectWebsite[2];
 						document.getElementById("project4Title").innerHTML = Object.keys(cleanProjectObject)[3];
 						document.getElementById("project4Pic").src = 'images/' + Object.keys(cleanProjectObject)[3] + '.jpg';
 						document.getElementById("project4Caption").innerHTML = cleanProjectCaptions[3];
 						document.getElementById("project4Github").href = cleanProjectGithub[3];
+						document.getElementById("project4Website").href = cleanProjectWebsite[3];
 						document.getElementById("project5Title").innerHTML = Object.keys(cleanProjectObject)[4];
 						document.getElementById("project5Pic").src = 'images/' + Object.keys(cleanProjectObject)[4] + '.jpg';
 						document.getElementById("project5Caption").innerHTML = cleanProjectCaptions[4];
 						document.getElementById("project5Github").href = cleanProjectGithub[4];
+						document.getElementById("project5Website").href = cleanProjectWebsite[4];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
@@ -278,18 +262,22 @@ console.log(projects)
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
 						document.getElementById("project1Github").href = cleanProjectGithub[0];
+						document.getElementById("project1Website").href = cleanProjectWebsite[0];
 						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
 						document.getElementById("project2Github").href = cleanProjectGithub[1];
+						document.getElementById("project2Website").href = cleanProjectWebsite[1];
 						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
 						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
 						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
 						document.getElementById("project3Github").href = cleanProjectGithub[2];
+						document.getElementById("project3Website").href = cleanProjectWebsite[2];
 						document.getElementById("project4Title").innerHTML = Object.keys(cleanProjectObject)[3];
 						document.getElementById("project4Pic").src = 'images/' + Object.keys(cleanProjectObject)[3] + '.jpg';
 						document.getElementById("project4Caption").innerHTML = cleanProjectCaptions[3];
 						document.getElementById("project4Github").href = cleanProjectGithub[3];
+						document.getElementById("project4Website").href = cleanProjectWebsite[3];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
@@ -309,14 +297,17 @@ console.log(projects)
 						document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 						document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
 						document.getElementById("project1Github").href = cleanProjectGithub[0];
+						document.getElementById("project1Website").href = cleanProjectWebsite[0];
 						document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 						document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 						document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
 						document.getElementById("project2Github").href = cleanProjectGithub[1];
+						document.getElementById("project2Website").href = cleanProjectWebsite[1];
 						document.getElementById("project3Title").innerHTML = Object.keys(cleanProjectObject)[2];
 						document.getElementById("project3Pic").src = 'images/' + Object.keys(cleanProjectObject)[2] + '.jpg';
 						document.getElementById("project3Caption").innerHTML = cleanProjectCaptions[2];
 						document.getElementById("project3Github").href = cleanProjectGithub[2];
+						document.getElementById("project3Website").href = cleanProjectWebsite[2];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project2").removeClass("animated slideOutRight");
 						$('.project1').addClass('animated slideInRight');
@@ -333,10 +324,12 @@ console.log(projects)
 					document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 					document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
 					document.getElementById("project1Github").href = cleanProjectGithub[0];
+					document.getElementById("project1Website").href = cleanProjectWebsite[0];
 					document.getElementById("project2Title").innerHTML = Object.keys(cleanProjectObject)[1];
 					document.getElementById("project2Pic").src = 'images/' + Object.keys(cleanProjectObject)[1] + '.jpg';
 					document.getElementById("project2Caption").innerHTML = cleanProjectCaptions[1];
 					document.getElementById("project2Github").href = cleanProjectGithub[1];
+					document.getElementById("project2Website").href = cleanProjectWebsite[1];
 					$(".project1").removeClass("animated slideOutRight");
 					$(".project2").removeClass("animated slideOutRight");
 					$('.project1').addClass('animated slideInRight');
@@ -351,6 +344,7 @@ console.log(projects)
 					document.getElementById("project1Pic").src = 'images/' + Object.keys(cleanProjectObject)[0] + '.jpg';
 					document.getElementById("project1Caption").innerHTML = cleanProjectCaptions[0];
 					document.getElementById("project1Github").href = cleanProjectGithub[0];
+					document.getElementById("project1Website").href = cleanProjectWebsite[0];
 						$(".project1").removeClass("animated slideOutRight");
 						$(".project1").show();
 						$('.project1').addClass('animated slideInRight');
@@ -367,13 +361,3 @@ console.log(projects)
 			}
 
 }
-
-
-
-
-
-/////add a picture and clean up skills portion to make smaller
-
-
-
-
